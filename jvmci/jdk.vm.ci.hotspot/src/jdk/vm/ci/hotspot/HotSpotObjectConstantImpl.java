@@ -39,7 +39,7 @@ import jdk.vm.ci.meta.ResolvedJavaType;
  * Represents a constant non-{@code null} object reference, within the compiler and across the
  * compiler/runtime interface.
  */
-final class HotSpotObjectConstantImpl implements HotSpotObjectConstant, HotSpotProxified {
+public final class HotSpotObjectConstantImpl implements HotSpotObjectConstant, HotSpotProxified {
 
     static JavaConstant forObject(Object object) {
         return forObject(object, false);
@@ -108,7 +108,7 @@ final class HotSpotObjectConstantImpl implements HotSpotObjectConstant, HotSpotP
     /**
      * Package-private accessor for the object represented by this constant.
      */
-    Object object() {
+    public Object object() {
         return object;
     }
 
